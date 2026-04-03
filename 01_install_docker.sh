@@ -1,19 +1,12 @@
 #!/bin/bash
 
 # Скрипт установки Docker
-# IP адрес сервера (замените на ваш IP)
-SERVER_IP="192.168.192.141"
-
 echo "========================================="
 echo "Начало установки Docker"
 echo "========================================="
 
-# Обновление пакетов
-apt update && apt upgrade -y
-
-# Установка зависимостей
-apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
-
+# Обновление пакетов (если не обновляли ранее)
+apt update
 # Добавление GPG-ключа Docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 

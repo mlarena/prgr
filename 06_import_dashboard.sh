@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Скрипт импорта дашборда Node Exporter Full
-# IP адрес сервера (замените на ваш IP)
-SERVER_IP="192.168.192.141"
-
+# Получение IP из файла или автоматическое определение
+if [ -f /tmp/server_ip.txt ]; then
+    SERVER_IP=$(cat /tmp/server_ip.txt)
+else
+    SERVER_IP=$(ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
+fi
 echo "========================================="
 echo "Импорт дашборда для Node Exporter"
 echo "========================================="
@@ -12,32 +15,8 @@ echo "========================================="
 DASHBOARD_ID="1860"
 DASHBOARD_NAME="Node Exporter Full"
 
-# Импорт дашборда через API Grafana
-curl -X POST -H "Content-Type: application/json" \
-  -H "Accept: application/json" \
-  -d '{
-    "dashboard": {
-      "id": null,
-      "title": "Node Exporter Full",
-      "tags": ["node-exporter", "prometheus"],
-      "timezone": "browser",
-      "schemaVersion": 16,
-      "version": 0
-    },
-    "overwrite": true,
-    "inputs": [
-      {
-        "name": "DS_PROMETHEUS",
-        "type": "datasource",
-        "pluginId": "prometheus",
-        "value": "Prometheus"
-      }
-    ]
-  }' \
-  http://admin:admin@${SERVER_IP}:3000/api/dashboards/db 2>/dev/null
-
-# Альтернативный способ - импорт через grafana.com
-echo "Попытка импорта дашборда с grafana.com..."
+# Импорт дашборда Node Exporter Full с grafana.com
+echo "Импорт дашборда Node Exporter Full..."
 curl -X POST -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -d '{
@@ -55,7 +34,6 @@ curl -X POST -H "Content-Type: application/json" \
     ]
   }' \
   http://admin:admin@${SERVER_IP}:3000/api/dashboards/import 2>/dev/null
-
 echo "========================================="
 echo "Дашборд импортирован"
 echo "========================================="

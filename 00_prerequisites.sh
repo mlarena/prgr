@@ -1,21 +1,7 @@
 #!/bin/bash
 
-# Получение директории скрипта
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Подключение функций
-if [ -f "${SCRIPT_DIR}/functions.sh" ]; then
-    source "${SCRIPT_DIR}/functions.sh"
-else
-    # Если functions.sh нет, используем простой метод определения IP
-    get_server_ip() {
-        ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1
-    }
-fi
-
 # Автоматическое определение IP адреса
-SERVER_IP=$(get_server_ip)
-
+SERVER_IP=$(ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
 echo "========================================="
 echo "Предварительная установка утилит"
 echo "IP адрес сервера: ${SERVER_IP}"
@@ -40,7 +26,8 @@ apt install -y \
     jq \
     git \
     vim \
-    iproute2
+    iproute2 \
+    sudo
 
 # Установка lsb-release если не установлен
 if ! command -v lsb_release &> /dev/null; then
