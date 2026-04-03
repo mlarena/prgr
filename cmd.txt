@@ -1,0 +1,2 @@
+scp "C:\git\PrGr\sh_prgr.zip" devuser@192.168.192.141:/tmp/
+
