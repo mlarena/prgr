@@ -1,3 +1,10 @@
 scp "C:\git\PrGr\sh_prgr.zip" devuser@192.168.192.141:/tmp/
 ok
+iftop 
+nload 
+bmon 
 
+# Память и CPU
+vmstat 1  # обновлять каждую секунду
+# или
+mpstat 1  # статистика CPU
