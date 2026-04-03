@@ -19,7 +19,6 @@ apt install -y \
     ca-certificates \
     curl \
     gnupg2 \
-    software-properties-common \
     wget \
     lsb-release \
     net-tools \
@@ -28,7 +27,6 @@ apt install -y \
     vim \
     iproute2 \
     sudo
-
 # Установка lsb-release если не установлен
 if ! command -v lsb_release &> /dev/null; then
     apt install -y lsb-release
