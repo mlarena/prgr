@@ -27,7 +27,8 @@ apt install -y \
     vim \
     iproute2 \
     sudo \
-    nload
+    nload \
+    iftop 
 # Установка lsb-release если не установлен
 if ! command -v lsb_release &> /dev/null; then
     apt install -y lsb-release
