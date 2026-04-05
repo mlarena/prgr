@@ -53,7 +53,8 @@ else
     echo "Образ Prometheus уже загружен"
 fi
 # Запускаем Prometheus в Docker
-docker run -d \  --name=prometheus \
+docker run -d \
+  --name=prometheus \
   --restart unless-stopped \
   --network=host \
   -v /monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
@@ -61,7 +62,6 @@ docker run -d \  --name=prometheus \
   prom/prometheus \
   --config.file=/etc/prometheus/prometheus.yml \
   --storage.tsdb.path=/prometheus
-
 echo "========================================="
 echo "Установка Prometheus завершена"
 echo "========================================="

@@ -26,14 +26,14 @@ else
 fi
 
 # Запускаем Grafana в Docker
-docker run -d \  --name=grafana \
+docker run -d \
+  --name=grafana \
   --restart unless-stopped \
   --network=host \
   -v grafana-data:/var/lib/grafana \
   -v grafana-logs:/var/log/grafana \
   -v grafana-config:/etc/grafana \
   grafana/grafana
-
 echo "========================================="
 echo "Установка Grafana завершена"
 echo "========================================="
