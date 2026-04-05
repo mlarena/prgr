@@ -7,3 +7,31 @@ bmon
 vmstat 1  # обновлять каждую секунду
 # или
 mpstat 1  # статистика CPU
+
+
+{
+  "registry-mirrors": [
+    "https://mirror.gcr.io",
+    "https://dockerhub1.beget.com"
+  ]
+}
+
+
+{
+  "registry-mirrors": [
+    "https://docker.1ms.run",
+    "https://docker.xuanyuan.me"
+  ]
+}
+
+
+{
+  "registry-mirrors": [
+    "https://docker.1ms.run",
+    "https://docker.m.daocloud.io",
+    "https://docker.xuanyuan.me",
+    "https://lispy.org",
+    "https://docker-0.unsee.tech",
+    "https://dockerhub.timeweb.cloud"
+  ]
+}
