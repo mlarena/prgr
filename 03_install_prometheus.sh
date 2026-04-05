@@ -44,9 +44,16 @@ EOF
 docker stop prometheus 2>/dev/null
 docker rm prometheus 2>/dev/null
 
+# Загружаем образ Prometheus (если еще нет)
+echo "Проверка наличия образа Prometheus..."
+if ! docker images prom/prometheus --format "{{.Repository}}" | grep -q prom/prometheus; then
+    echo "Загрузка образа Prometheus..."
+    docker pull prom/prometheus
+else
+    echo "Образ Prometheus уже загружен"
+fi
 # Запускаем Prometheus в Docker
-docker run -d \
-  --name=prometheus \
+docker run -d \  --name=prometheus \
   --restart unless-stopped \
   --network=host \
   -v /monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \

@@ -16,9 +16,17 @@ echo "========================================="
 docker stop grafana 2>/dev/null
 docker rm grafana 2>/dev/null
 
+# Загружаем образ Grafana (если еще нет)
+echo "Проверка наличия образа Grafana..."
+if ! docker images grafana/grafana --format "{{.Repository}}" | grep -q grafana/grafana; then
+    echo "Загрузка образа Grafana..."
+    docker pull grafana/grafana
+else
+    echo "Образ Grafana уже загружен"
+fi
+
 # Запускаем Grafana в Docker
-docker run -d \
-  --name=grafana \
+docker run -d \  --name=grafana \
   --restart unless-stopped \
   --network=host \
   -v grafana-data:/var/lib/grafana \
