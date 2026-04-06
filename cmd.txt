@@ -1,8 +1,25 @@
-scp "C:\git\PrGr\sh_prgr.zip" devuser@192.168.192.141:/tmp/
+scp "C:\git\prgr\sh_prgr.zip" devuser@192.168.192.141:/tmp/
 iftop 
 nload 
 bmon 
 
+docker restart prometheus
+docker restart grafana
+sudo systemctl restart postgres_exporter
+SHOW config_file;
+/etc/postgresql/18/main/postgresql.conf
+shared_preload_libraries = 'pg_stat_statements'
+
+24298
+24298
+  - job_name: 'postgres_exporter'
+    static_configs:
+      - targets:
+          - '192.168.192.137:9187'
+          - '192.168.192.143:9187'
+
+
+curl http://localhost:9187/metrics | head -20
 # Память и CPU
 vmstat 1  # обновлять каждую секунду
 # или
