@@ -1,31 +1,34 @@
 #!/bin/bash
+set -euo pipefail
 
-# Скрипт установки postgres_exporter для ARM (aarch64/armv7/armv6)
+# Установка postgres_exporter (x86_64 и ARM — единый скрипт, архитектура определяется автоматически)
 # Пароль вшит прямо в сервисный файл
 
-set -e
-
 echo "========================================="
-echo "Установка PostgreSQL Exporter (ARM)"
+echo "Установка PostgreSQL Exporter"
 echo "========================================="
 
-# Определение архитектуры ARM
+# Определение архитектуры
 ARCH=$(uname -m)
-case $ARCH in
+case ${ARCH} in
+    x86_64|amd64)
+        EXPORTER_ARCH="linux-amd64"
+        echo "Обнаружена архитектура: AMD64 (x86_64)"
+        ;;
     aarch64|arm64)
-        POSTGRES_EXPORTER_ARCH="linux-arm64"
+        EXPORTER_ARCH="linux-arm64"
         echo "Обнаружена архитектура: ARM64 (aarch64)"
         ;;
     armv7l|armhf)
-        POSTGRES_EXPORTER_ARCH="linux-armv7"
+        EXPORTER_ARCH="linux-armv7"
         echo "Обнаружена архитектура: ARMv7"
         ;;
     armv6l)
-        POSTGRES_EXPORTER_ARCH="linux-armv6"
+        EXPORTER_ARCH="linux-armv6"
         echo "Обнаружена архитектура: ARMv6"
         ;;
     *)
-        echo "Неподдерживаемая архитектура: $ARCH"
+        echo "Неподдерживаемая архитектура: ${ARCH}" >&2
         exit 1
         ;;
 esac
@@ -43,23 +46,19 @@ echo "Сохраните его для настройки PostgreSQL!"
 
 # Скачивание и установка
 cd /tmp
-wget https://github.com/prometheus-community/postgres_exporter/releases/download/v${POSTGRES_EXPORTER_VERSION}/postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${POSTGRES_EXPORTER_ARCH}.tar.gz
+wget --timeout=30 --tries=3 \
+    "https://github.com/prometheus-community/postgres_exporter/releases/download/v${POSTGRES_EXPORTER_VERSION}/postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${EXPORTER_ARCH}.tar.gz"
 
-# Проверка успешности скачивания
-if [ $? -ne 0 ]; then
-    echo "Ошибка скачивания PostgreSQL Exporter"
-    exit 1
-fi
+tar xf "postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${EXPORTER_ARCH}.tar.gz"
 
-tar -xvf postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${POSTGRES_EXPORTER_ARCH}.tar.gz
-sudo cp postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${POSTGRES_EXPORTER_ARCH}/postgres_exporter /usr/local/bin/
+install -m 755 "postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${EXPORTER_ARCH}/postgres_exporter" /usr/local/bin/postgres_exporter
 
 # Создание пользователя
-sudo useradd --no-create-home --shell /bin/false postgres_exporter 2>/dev/null || true
-sudo chown postgres_exporter:postgres_exporter /usr/local/bin/postgres_exporter
+useradd --no-create-home --shell /bin/false postgres_exporter 2>/dev/null || true
+chown postgres_exporter:postgres_exporter /usr/local/bin/postgres_exporter
 
 # Создание systemd сервиса с вшитым паролем
-sudo tee /etc/systemd/system/postgres_exporter.service << EOF
+tee /etc/systemd/system/postgres_exporter.service << EOF
 [Unit]
 Description=Prometheus PostgreSQL Exporter
 Wants=network-online.target
@@ -78,13 +77,12 @@ WantedBy=multi-user.target
 EOF
 
 # Запуск сервиса
-sudo systemctl daemon-reload
-sudo systemctl enable postgres_exporter
-sudo systemctl start postgres_exporter
+systemctl daemon-reload
+systemctl enable postgres_exporter
+systemctl start postgres_exporter
 
 # Очистка
-rm -rf /tmp/postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${POSTGRES_EXPORTER_ARCH}*
-rm -f /tmp/postgres_exporter-${POSTGRES_EXPORTER_VERSION}.${POSTGRES_EXPORTER_ARCH}.tar.gz
+rm -rf /tmp/postgres_exporter-*
 
 echo "========================================="
 echo "Установка PostgreSQL Exporter завершена"
@@ -103,7 +101,7 @@ echo "GRANT CONNECT ON DATABASE ${POSTGRES_DB} TO ${POSTGRES_USER};"
 echo ""
 echo "========================================="
 echo "Проверка статуса:"
-sudo systemctl status postgres_exporter --no-pager
+systemctl status postgres_exporter --no-pager
 
 echo ""
 echo "Проверка метрик: curl http://localhost:9187/metrics | grep pg_up"

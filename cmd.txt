@@ -23,6 +23,7 @@ curl http://localhost:9187/metrics | head -20
 # Память и CPU
 vmstat 1  # обновлять каждую секунду
 # или
+
 mpstat 1  # статистика CPU
 
 

@@ -1,11 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 
-# Получение IP из файла или автоматическое определение
-if [ -f /tmp/server_ip.txt ]; then
-    SERVER_IP=$(cat /tmp/server_ip.txt)
-else
-    SERVER_IP=$(ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
-fi
+source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
+
+SERVER_IP=$(detect_server_ip)
 
 echo "========================================="
 echo "Установка Prometheus"
@@ -41,17 +39,13 @@ scrape_configs:
 EOF
 
 # Останавливаем и удаляем старый контейнер если существует
-docker stop prometheus 2>/dev/null
-docker rm prometheus 2>/dev/null
+docker stop prometheus 2>/dev/null || true
+docker rm prometheus 2>/dev/null || true
 
-# Загружаем образ Prometheus (если еще нет)
-echo "Проверка наличия образа Prometheus..."
-if ! docker images prom/prometheus --format "{{.Repository}}" | grep -q prom/prometheus; then
-    echo "Загрузка образа Prometheus..."
-    docker pull prom/prometheus
-else
-    echo "Образ Prometheus уже загружен"
-fi
+# Загружаем образ Prometheus (docker pull идемпотентен — докачает только недостающее)
+echo "Загрузка образа Prometheus..."
+docker pull prom/prometheus
+
 # Запускаем Prometheus в Docker
 docker run -d \
   --name=prometheus \
@@ -62,6 +56,7 @@ docker run -d \
   prom/prometheus \
   --config.file=/etc/prometheus/prometheus.yml \
   --storage.tsdb.path=/prometheus
+
 echo "========================================="
 echo "Установка Prometheus завершена"
 echo "========================================="

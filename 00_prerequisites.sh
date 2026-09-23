@@ -1,14 +1,15 @@
 #!/bin/bash
+set -euo pipefail
+
+# Подключаем общие функции
+source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 
 # Автоматическое определение IP адреса
-SERVER_IP=$(ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
+SERVER_IP=$(detect_server_ip)
 echo "========================================="
 echo "Предварительная установка утилит"
 echo "IP адрес сервера: ${SERVER_IP}"
 echo "========================================="
-
-# Сохраняем IP в файл для использования другими скриптами
-echo "${SERVER_IP}" > /tmp/server_ip.txt
 
 # Обновление пакетов
 apt update && apt upgrade -y
@@ -28,11 +29,7 @@ apt install -y \
     iproute2 \
     sudo \
     nload \
-    iftop 
-# Установка lsb-release если не установлен
-if ! command -v lsb_release &> /dev/null; then
-    apt install -y lsb-release
-fi
+    iftop
 
 echo "========================================="
 echo "Предварительная установка завершена"

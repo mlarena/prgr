@@ -1,39 +1,45 @@
 #!/bin/bash
+set -euo pipefail
 
-# Скрипт импорта дашборда Node Exporter Full
-# Получение IP из файла или автоматическое определение
-if [ -f /tmp/server_ip.txt ]; then
-    SERVER_IP=$(cat /tmp/server_ip.txt)
-else
-    SERVER_IP=$(ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
-fi
+source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
+
+SERVER_IP=$(detect_server_ip)
+GRAFANA_URL="http://localhost:3000"
+
 echo "========================================="
 echo "Импорт дашборда для Node Exporter"
 echo "========================================="
 
 # ID дашборда Node Exporter Full (1860)
 DASHBOARD_ID="1860"
-DASHBOARD_NAME="Node Exporter Full"
+DASHBOARD_JSON="/tmp/dashboard_${DASHBOARD_ID}.json"
 
-# Импорт дашборда Node Exporter Full с grafana.com
-echo "Импорт дашборда Node Exporter Full..."
-curl -X POST -H "Content-Type: application/json" \
+# Ждем запуска Grafana
+echo "Ожидание запуска Grafana..."
+wait_for_url "${GRAFANA_URL}/api/health" "Grafana" 30
+
+# Скачиваем полное тело дашборда с grafana.com
+# (эндпоинт /api/dashboards/import ожидает полный JSON, а не только ID)
+echo "Скачивание дашборда Node Exporter Full (ID: ${DASHBOARD_ID})..."
+curl -fsSL --max-time 30 --retry 2 \
+  "https://grafana.com/api/dashboards/${DASHBOARD_ID}/revisions/latest/download" \
+  -o "${DASHBOARD_JSON}"
+
+# Обнуляем id дашборда (обязательно для импорта) и оборачиваем в формат API
+jq '.id = null' "${DASHBOARD_JSON}" \
+  | jq -s '{dashboard: .[0], overwrite: true}' > "${DASHBOARD_JSON}.payload"
+
+# Импортируем дашборд
+echo "Импорт дашборда..."
+curl -fsS -X POST -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -d '{
-    "dashboard": {
-      "id": '${DASHBOARD_ID}'
-    },
-    "overwrite": true,
-    "inputs": [
-      {
-        "name": "DS_PROMETHEUS",
-        "type": "datasource",
-        "pluginId": "prometheus",
-        "value": "Prometheus"
-      }
-    ]
-  }' \
-  http://admin:admin@${SERVER_IP}:3000/api/dashboards/import 2>/dev/null
+  -u admin:admin \
+  --data-binary "@${DASHBOARD_JSON}.payload" \
+  "${GRAFANA_URL}/api/dashboards/db" > /dev/null
+
+# Очистка временных файлов
+rm -f "${DASHBOARD_JSON}" "${DASHBOARD_JSON}.payload"
+
 echo "========================================="
 echo "Дашборд импортирован"
 echo "========================================="
