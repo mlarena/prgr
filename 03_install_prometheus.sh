@@ -5,6 +5,12 @@ source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 
 SERVER_IP=$(detect_server_ip)
 
+# === Архитектура ===
+# Этот скрипт запускается на СЕРВЕРЕ МОНИТОРИНГА (Grafana/Prometheus)
+# MONITORED_IP — сервер, который будем мониторить (там установлен node_exporter)
+MONITORED_IP="192.168.192.147"
+# ===================
+
 echo "========================================="
 echo "Установка Prometheus"
 echo "IP адрес сервера: ${SERVER_IP}"
@@ -32,10 +38,10 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-  # Мониторинг хоста через node_exporter
+  # Мониторинг хоста через node_exporter (сервер, который мониторим)
   - job_name: 'node_exporter'
     static_configs:
-      - targets: ['${SERVER_IP}:9100']
+      - targets: ['${MONITORED_IP}:9100']
 EOF
 
 # Останавливаем и удаляем старый контейнер если существует
