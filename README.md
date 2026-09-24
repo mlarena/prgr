@@ -70,6 +70,7 @@ sudo ./postgres_exporter.sh             # postgres_exporter (порт 9187)
 ## Файлы
 
 - `common.sh` — общие функции (определение IP, ожидание сервиса, получение версии с GitHub API). Подключается скриптами автоматически, запускать не нужно.
+- `DASHBOARDS.md` — руководство по настройке дашбордов: структура `prometheus.yml`, PromQL-запросы для dotnet-приложения (ComplexesMonitoringTCU-M), PostgreSQL и хоста.
 - `collect_sh_files.ps1` — упаковка всех `.sh` в `sh_prgr.zip` (для переноса на Windows-машине).
 - `cmd.txt` — рабочие заметки (scp, зеркала, конфигурация PostgreSQL).
 

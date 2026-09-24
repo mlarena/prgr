@@ -1,20 +1,20 @@
 #!/bin/bash
 set -euo pipefail
 
-# Подключаем общие функции
+# Load shared functions
 source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 
-# Автоматическое определение IP адреса
+# Automatic IP address detection
 SERVER_IP=$(detect_server_ip)
 echo "========================================="
-echo "Предварительная установка утилит"
-echo "IP адрес сервера: ${SERVER_IP}"
+echo "Preliminary tool installation"
+echo "Server IP address: ${SERVER_IP}"
 echo "========================================="
 
-# Обновление пакетов
+# Update packages
 apt update && apt upgrade -y
 
-# Установка необходимых утилит
+# Install required utilities
 apt install -y \
     apt-transport-https \
     ca-certificates \
@@ -32,5 +32,5 @@ apt install -y \
     iftop
 
 echo "========================================="
-echo "Предварительная установка завершена"
+echo "Preliminary installation completed"
 echo "========================================="

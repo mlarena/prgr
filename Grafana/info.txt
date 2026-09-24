@@ -1,0 +1,1 @@
+ExecStart=/usr/local/bin/postgres_exporter --web.listen-address=:9187 --collector.stat_statements --collector.stat_statements.limit=50 --collector.stat_statements.query_length=80

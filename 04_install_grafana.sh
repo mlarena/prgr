@@ -6,22 +6,22 @@ source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 SERVER_IP=$(detect_server_ip)
 
 echo "========================================="
-echo "Установка Grafana"
-echo "IP адрес сервера: ${SERVER_IP}"
+echo "Installing Grafana"
+echo "Server IP address: ${SERVER_IP}"
 echo "========================================="
 
-# Останавливаем и удаляем старый контейнер если существует
+# Stop and remove the old container if it exists
 docker stop grafana 2>/dev/null || true
 docker rm grafana 2>/dev/null || true
 
-# Загружаем образ Grafana (docker pull идемпотентен)
-echo "Загрузка образа Grafana..."
+# Pull the Grafana image (docker pull is idempotent)
+echo "Pulling Grafana image..."
 docker pull grafana/grafana
 
-# Запускаем Grafana в Docker
-# GF_SECURITY_ADMIN_PASSWORD — задаем пароль admin явно, чтобы API-скрипты
-# (05, 06, 07) не упали с 401 на свежей Grafana
-# GF_USERS_DEFAULT_LANGUAGE — язык интерфейса по умолчанию для всех новых пользователей
+# Run Grafana in Docker
+# GF_SECURITY_ADMIN_PASSWORD — set the admin password explicitly so the API scripts
+# (05, 06, 07) do not fail with 401 on a fresh Grafana instance
+# GF_USERS_DEFAULT_LANGUAGE — default UI language for all new users
 docker run -d \
   --name=grafana \
   --restart unless-stopped \
@@ -34,15 +34,15 @@ docker run -d \
   grafana/grafana
 
 echo "========================================="
-echo "Установка Grafana завершена"
+echo "Grafana installation completed"
 echo "========================================="
 
-# Проверяем запуск
+# Verify startup
 sleep 5
 docker ps | grep grafana
 
 echo "========================================="
-echo "Grafana доступна по адресу: http://${SERVER_IP}:3000"
-echo "Логин: admin"
-echo "Пароль: admin"
+echo "Grafana is available at: http://${SERVER_IP}:3000"
+echo "Login: admin"
+echo "Password: admin"
 echo "========================================="

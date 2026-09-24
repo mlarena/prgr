@@ -1,45 +1,45 @@
 #!/bin/bash
 set -euo pipefail
 
-# Скрипт установки Docker
+# Docker installation script
 echo "========================================="
-echo "Начало установки Docker"
+echo "Starting Docker installation"
 echo "========================================="
 
-# Обновление пакетов (если не обновляли ранее)
+# Update packages (if not done earlier)
 apt update
 
-# Добавление GPG-ключа Docker
-# Удаляем старый ключ перед импортом, чтобы повторный запуск не падал
+# Add the Docker GPG key
+# Remove the old key before import so re-runs do not fail
 rm -f /usr/share/keyrings/docker-archive-keyring.gpg
 curl -fsSL --max-time 30 --retry 2 https://download.docker.com/linux/debian/gpg | gpg --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-# Добавление репозитория Docker
+# Add the Docker repository
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Установка Docker
+# Install Docker
 apt update
 apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-# Включение автозапуска Docker
+# Enable Docker autostart
 systemctl enable docker
 systemctl start docker
 
-# Добавление реального пользователя (не root) в группу docker
-# При запуске через sudo берем имя исходного пользователя из SUDO_USER
+# Add the real user (not root) to the docker group
+# When run via sudo, take the original username from SUDO_USER
 TARGET_USER="${SUDO_USER:-$USER}"
 if [ -n "${TARGET_USER}" ] && [ "${TARGET_USER}" != "root" ]; then
     usermod -aG docker "${TARGET_USER}"
-    echo "Пользователь ${TARGET_USER} добавлен в группу docker"
-    echo "(выйдите из сессии и войдите заново для применения прав)"
+    echo "User ${TARGET_USER} added to the docker group"
+    echo "(log out and log back in for the change to take effect)"
 fi
 
 echo "========================================="
-echo "Установка Docker завершена"
+echo "Docker installation completed"
 echo "========================================="
 
-# Проверка установки
+# Verify installation
 docker --version
 docker ps
 
-echo "Docker успешно установлен!"
+echo "Docker installed successfully!"

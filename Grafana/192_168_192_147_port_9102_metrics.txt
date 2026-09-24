@@ -1,0 +1,1403 @@
+# HELP node_filesystem_avail_bytes Free disk space
+# TYPE node_filesystem_avail_bytes gauge
+node_filesystem_avail_bytes{mountpoint="/",fstype="ext4"} 34580877312
+node_filesystem_avail_bytes{mountpoint="/sys/kernel/tracing",fstype="tracefs"} 0
+# HELP node_filesystem_size_bytes Filesystem size in bytes
+# TYPE node_filesystem_size_bytes gauge
+node_filesystem_size_bytes{mountpoint="/",fstype="ext4"} 40947412992
+node_filesystem_size_bytes{mountpoint="/sys/kernel/tracing",fstype="tracefs"} 0
+# HELP node_load1 Load average over the last minute.
+# TYPE node_load1 gauge
+node_load1 0
+# HELP node_load5 Load average over the last 5 minutes.
+# TYPE node_load5 gauge
+node_load5 0
+# HELP node_load15 Load average over the last 15 minutes.
+# TYPE node_load15 gauge
+node_load15 0
+# HELP node_network_receive_bytes_total Bytes received over the network
+# TYPE node_network_receive_bytes_total counter
+node_network_receive_bytes_total{device="lo"} 165048686
+node_network_receive_bytes_total{device="ens33"} 766018877
+# HELP node_network_transmit_bytes_total Bytes sent over the network
+# TYPE node_network_transmit_bytes_total counter
+node_network_transmit_bytes_total{device="lo"} 165048686
+node_network_transmit_bytes_total{device="ens33"} 1795482015
+# HELP node_cpu_seconds_total Seconds the CPU spent in each mode
+# TYPE node_cpu_seconds_total counter
+node_cpu_seconds_total{cpu="0",mode="idle"} 68359.78
+node_cpu_seconds_total{cpu="0",mode="iowait"} 2.52
+node_cpu_seconds_total{cpu="0",mode="irq"} 0
+node_cpu_seconds_total{cpu="0",mode="nice"} 0
+node_cpu_seconds_total{cpu="0",mode="softirq"} 26.74
+node_cpu_seconds_total{cpu="0",mode="steal"} 0
+node_cpu_seconds_total{cpu="0",mode="system"} 93.85
+node_cpu_seconds_total{cpu="0",mode="user"} 153.99
+node_cpu_seconds_total{cpu="1",mode="idle"} 68400.2
+node_cpu_seconds_total{cpu="1",mode="iowait"} 3.83
+node_cpu_seconds_total{cpu="1",mode="irq"} 0
+node_cpu_seconds_total{cpu="1",mode="nice"} 0.04
+node_cpu_seconds_total{cpu="1",mode="softirq"} 13.28
+node_cpu_seconds_total{cpu="1",mode="steal"} 0
+node_cpu_seconds_total{cpu="1",mode="system"} 94.94
+node_cpu_seconds_total{cpu="1",mode="user"} 162.99
+# HELP node_memory_MemTotal_bytes Memory information field MemTotal
+# TYPE node_memory_MemTotal_bytes gauge
+node_memory_MemTotal_bytes 7719751680
+# HELP node_memory_MemFree_bytes Memory information field MemFree
+# TYPE node_memory_MemFree_bytes gauge
+node_memory_MemFree_bytes 2867273728
+# HELP node_memory_MemAvailable_bytes Memory information field MemAvailable
+# TYPE node_memory_MemAvailable_bytes gauge
+node_memory_MemAvailable_bytes 5859389440
+# HELP node_memory_Buffers_bytes Memory information field Buffers
+# TYPE node_memory_Buffers_bytes gauge
+node_memory_Buffers_bytes 99127296
+# HELP node_memory_Cached_bytes Memory information field Cached
+# TYPE node_memory_Cached_bytes gauge
+node_memory_Cached_bytes 3512156160
+# HELP node_memory_SwapCached_bytes Memory information field SwapCached
+# TYPE node_memory_SwapCached_bytes gauge
+node_memory_SwapCached_bytes 0
+# HELP node_memory_Active_bytes Memory information field Active
+# TYPE node_memory_Active_bytes gauge
+node_memory_Active_bytes 747036672
+# HELP node_memory_Inactive_bytes Memory information field Inactive
+# TYPE node_memory_Inactive_bytes gauge
+node_memory_Inactive_bytes 3667640320
+# HELP node_memory_Active_anon_bytes Memory information field Active(anon)
+# TYPE node_memory_Active_anon_bytes gauge
+node_memory_Active_anon_bytes 64425984
+# HELP node_memory_Inactive_anon_bytes Memory information field Inactive(anon)
+# TYPE node_memory_Inactive_anon_bytes gauge
+node_memory_Inactive_anon_bytes 1245777920
+# HELP node_memory_Active_file_bytes Memory information field Active(file)
+# TYPE node_memory_Active_file_bytes gauge
+node_memory_Active_file_bytes 682610688
+# HELP node_memory_Inactive_file_bytes Memory information field Inactive(file)
+# TYPE node_memory_Inactive_file_bytes gauge
+node_memory_Inactive_file_bytes 2421862400
+# HELP node_memory_Unevictable_bytes Memory information field Unevictable
+# TYPE node_memory_Unevictable_bytes gauge
+node_memory_Unevictable_bytes 0
+# HELP node_memory_Mlocked_bytes Memory information field Mlocked
+# TYPE node_memory_Mlocked_bytes gauge
+node_memory_Mlocked_bytes 0
+# HELP node_memory_SwapTotal_bytes Memory information field SwapTotal
+# TYPE node_memory_SwapTotal_bytes gauge
+node_memory_SwapTotal_bytes 1022357504
+# HELP node_memory_SwapFree_bytes Memory information field SwapFree
+# TYPE node_memory_SwapFree_bytes gauge
+node_memory_SwapFree_bytes 1022357504
+# HELP node_memory_Zswap_bytes Memory information field Zswap
+# TYPE node_memory_Zswap_bytes gauge
+node_memory_Zswap_bytes 0
+# HELP node_memory_Zswapped_bytes Memory information field Zswapped
+# TYPE node_memory_Zswapped_bytes gauge
+node_memory_Zswapped_bytes 0
+# HELP node_memory_Dirty_bytes Memory information field Dirty
+# TYPE node_memory_Dirty_bytes gauge
+node_memory_Dirty_bytes 385024
+# HELP node_memory_Writeback_bytes Memory information field Writeback
+# TYPE node_memory_Writeback_bytes gauge
+node_memory_Writeback_bytes 0
+# HELP node_memory_AnonPages_bytes Memory information field AnonPages
+# TYPE node_memory_AnonPages_bytes gauge
+node_memory_AnonPages_bytes 784531456
+# HELP node_memory_Mapped_bytes Memory information field Mapped
+# TYPE node_memory_Mapped_bytes gauge
+node_memory_Mapped_bytes 664809472
+# HELP node_memory_Shmem_bytes Memory information field Shmem
+# TYPE node_memory_Shmem_bytes gauge
+node_memory_Shmem_bytes 506810368
+# HELP node_memory_KReclaimable_bytes Memory information field KReclaimable
+# TYPE node_memory_KReclaimable_bytes gauge
+node_memory_KReclaimable_bytes 197738496
+# HELP node_memory_Slab_bytes Memory information field Slab
+# TYPE node_memory_Slab_bytes gauge
+node_memory_Slab_bytes 256720896
+# HELP node_memory_SReclaimable_bytes Memory information field SReclaimable
+# TYPE node_memory_SReclaimable_bytes gauge
+node_memory_SReclaimable_bytes 197738496
+# HELP node_memory_SUnreclaim_bytes Memory information field SUnreclaim
+# TYPE node_memory_SUnreclaim_bytes gauge
+node_memory_SUnreclaim_bytes 58982400
+# HELP node_memory_KernelStack_bytes Memory information field KernelStack
+# TYPE node_memory_KernelStack_bytes gauge
+node_memory_KernelStack_bytes 6864896
+# HELP node_memory_PageTables_bytes Memory information field PageTables
+# TYPE node_memory_PageTables_bytes gauge
+node_memory_PageTables_bytes 7970816
+# HELP node_memory_SecPageTables_bytes Memory information field SecPageTables
+# TYPE node_memory_SecPageTables_bytes gauge
+node_memory_SecPageTables_bytes 0
+# HELP node_memory_NFS_Unstable_bytes Memory information field NFS_Unstable
+# TYPE node_memory_NFS_Unstable_bytes gauge
+node_memory_NFS_Unstable_bytes 0
+# HELP node_memory_Bounce_bytes Memory information field Bounce
+# TYPE node_memory_Bounce_bytes gauge
+node_memory_Bounce_bytes 0
+# HELP node_memory_WritebackTmp_bytes Memory information field WritebackTmp
+# TYPE node_memory_WritebackTmp_bytes gauge
+node_memory_WritebackTmp_bytes 0
+# HELP node_memory_CommitLimit_bytes Memory information field CommitLimit
+# TYPE node_memory_CommitLimit_bytes gauge
+node_memory_CommitLimit_bytes 4882231296
+# HELP node_memory_Committed_AS_bytes Memory information field Committed_AS
+# TYPE node_memory_Committed_AS_bytes gauge
+node_memory_Committed_AS_bytes 2216382464
+# HELP node_memory_VmallocTotal_bytes Memory information field VmallocTotal
+# TYPE node_memory_VmallocTotal_bytes gauge
+node_memory_VmallocTotal_bytes 35184372087808
+# HELP node_memory_VmallocUsed_bytes Memory information field VmallocUsed
+# TYPE node_memory_VmallocUsed_bytes gauge
+node_memory_VmallocUsed_bytes 56934400
+# HELP node_memory_VmallocChunk_bytes Memory information field VmallocChunk
+# TYPE node_memory_VmallocChunk_bytes gauge
+node_memory_VmallocChunk_bytes 0
+# HELP node_memory_Percpu_bytes Memory information field Percpu
+# TYPE node_memory_Percpu_bytes gauge
+node_memory_Percpu_bytes 58195968
+# HELP node_memory_HardwareCorrupted_bytes Memory information field HardwareCorrupted
+# TYPE node_memory_HardwareCorrupted_bytes gauge
+node_memory_HardwareCorrupted_bytes 0
+# HELP node_memory_AnonHugePages_bytes Memory information field AnonHugePages
+# TYPE node_memory_AnonHugePages_bytes gauge
+node_memory_AnonHugePages_bytes 459276288
+# HELP node_memory_ShmemHugePages_bytes Memory information field ShmemHugePages
+# TYPE node_memory_ShmemHugePages_bytes gauge
+node_memory_ShmemHugePages_bytes 0
+# HELP node_memory_ShmemPmdMapped_bytes Memory information field ShmemPmdMapped
+# TYPE node_memory_ShmemPmdMapped_bytes gauge
+node_memory_ShmemPmdMapped_bytes 0
+# HELP node_memory_FileHugePages_bytes Memory information field FileHugePages
+# TYPE node_memory_FileHugePages_bytes gauge
+node_memory_FileHugePages_bytes 0
+# HELP node_memory_FilePmdMapped_bytes Memory information field FilePmdMapped
+# TYPE node_memory_FilePmdMapped_bytes gauge
+node_memory_FilePmdMapped_bytes 0
+# HELP node_memory_Hugepagesize_bytes Memory information field Hugepagesize
+# TYPE node_memory_Hugepagesize_bytes gauge
+node_memory_Hugepagesize_bytes 2097152
+# HELP node_memory_Hugetlb_bytes Memory information field Hugetlb
+# TYPE node_memory_Hugetlb_bytes gauge
+node_memory_Hugetlb_bytes 0
+# HELP node_memory_DirectMap4k_bytes Memory information field DirectMap4k
+# TYPE node_memory_DirectMap4k_bytes gauge
+node_memory_DirectMap4k_bytes 165543936
+# HELP node_memory_DirectMap2M_bytes Memory information field DirectMap2M
+# TYPE node_memory_DirectMap2M_bytes gauge
+node_memory_DirectMap2M_bytes 4624220160
+# HELP node_memory_DirectMap1G_bytes Memory information field DirectMap1G
+# TYPE node_memory_DirectMap1G_bytes gauge
+node_memory_DirectMap1G_bytes 4294967296
+# HELP http_request_duration_seconds The duration of HTTP requests processed by an ASP.NET Core application.
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_sum{code="302",method="GET",controller="",action="",endpoint="/"} 0.06443460000000001
+http_request_duration_seconds_count{code="302",method="GET",controller="",action="",endpoint="/"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.001"} 2
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.002"} 3
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.004"} 3
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.008"} 3
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.016"} 3
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.032"} 4
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.064"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.128"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.256"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="0.512"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="1.024"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="2.048"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="4.096"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="8.192"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="16.384"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="32.768"} 5
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="/",le="+Inf"} 5
+http_request_duration_seconds_sum{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.7139971
+http_request_duration_seconds_count{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 3
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 3
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 3
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 4
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 4
+http_request_duration_seconds_sum{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}"} 6.9715593999999985
+http_request_duration_seconds_count{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 11
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 15
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 15
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 15
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 107
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 126
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 127
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 127
+http_request_duration_seconds_sum{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}"} 7.835921000000014
+http_request_duration_seconds_count{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 7
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 208
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 307
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 392
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 621
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 632
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 635
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 635
+http_request_duration_seconds_sum{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0161637
+http_request_duration_seconds_count{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0457557
+http_request_duration_seconds_count{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="302",method="GET",controller="",action="",endpoint=""} 0.0009201
+http_request_duration_seconds_count{code="302",method="GET",controller="",action="",endpoint=""} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.001"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.002"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.004"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.008"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.016"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.032"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.064"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.128"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.256"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="0.512"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="1.024"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="2.048"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="4.096"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="8.192"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="16.384"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="32.768"} 1
+http_request_duration_seconds_bucket{code="302",method="GET",controller="",action="",endpoint="",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0834206
+http_request_duration_seconds_count{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0934985
+http_request_duration_seconds_count{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0717209
+http_request_duration_seconds_count{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0295877
+http_request_duration_seconds_count{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.1718005
+http_request_duration_seconds_count{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0331398
+http_request_duration_seconds_count{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 2
+http_request_duration_seconds_sum{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0565398
+http_request_duration_seconds_count{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.206599
+http_request_duration_seconds_count{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.1607406
+http_request_duration_seconds_count{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 2
+http_request_duration_seconds_sum{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.155882
+http_request_duration_seconds_count{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 2
+http_request_duration_seconds_sum{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0508778
+http_request_duration_seconds_count{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0337692
+http_request_duration_seconds_count{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 0
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+http_request_duration_seconds_sum{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.069053
+http_request_duration_seconds_count{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 2
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 2
+http_request_duration_seconds_sum{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}"} 0.0238231
+http_request_duration_seconds_count{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.001"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.002"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.004"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.008"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.016"} 0
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.032"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.064"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.128"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.256"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="0.512"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="1.024"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="2.048"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="4.096"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="8.192"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="16.384"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="32.768"} 1
+http_request_duration_seconds_bucket{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}",le="+Inf"} 1
+# HELP http_requests_received_total Provides the count of HTTP requests that have been processed by the ASP.NET Core pipeline.
+# TYPE http_requests_received_total counter
+http_requests_received_total{code="302",method="GET",controller="",action="",endpoint="/"} 5
+http_requests_received_total{code="200",method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 4
+http_requests_received_total{code="200",method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}"} 127
+http_requests_received_total{code="200",method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}"} 635
+http_requests_received_total{code="200",method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="302",method="GET",controller="",action="",endpoint=""} 1
+http_requests_received_total{code="200",method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_requests_received_total{code="200",method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="302",method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_requests_received_total{code="200",method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_requests_received_total{code="200",method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="302",method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+http_requests_received_total{code="200",method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 2
+http_requests_received_total{code="200",method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}"} 1
+# HELP http_requests_in_progress The number of requests currently in progress in the ASP.NET Core pipeline. One series without controller/action label values counts all in-progress requests, with separate series existing for each controller-action pair.
+# TYPE http_requests_in_progress gauge
+http_requests_in_progress{method="GET",controller="",action="",endpoint="/"} 0
+http_requests_in_progress{method="GET",controller="Home",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Home",action="GetPostSensors",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Home",action="GetLatestSensorData",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Reports",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="MonitoringMap",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="",action="",endpoint=""} 0
+http_requests_in_progress{method="GET",controller="MonitoringMap",action="GetMapData",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Report",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Cameras",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Forecast",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Forecast",action="GetForecastH1",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="MonitoringPosts",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="POST",controller="MonitoringPosts",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="SensorErrors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Sensors",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="POST",controller="Sensors",action="Edit",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="DspdData",action="Index",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+http_requests_in_progress{method="GET",controller="DspdData",action="Details",endpoint="{controller=Home}/{action=Index}/{id?}"} 0
+# HELP dotnet_collection_count_total GC collection count
+# TYPE dotnet_collection_count_total counter
+dotnet_collection_count_total{generation="0"} 575
+dotnet_collection_count_total{generation="1"} 50
+dotnet_collection_count_total{generation="2"} 16
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1790162446.712192
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 64.721128
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 280839671808
+# HELP process_working_set_bytes Process working set
+# TYPE process_working_set_bytes gauge
+process_working_set_bytes 383606784
+# HELP process_private_memory_bytes Process private memory size
+# TYPE process_private_memory_bytes gauge
+process_private_memory_bytes 380628992
+# HELP process_open_handles Number of open handles
+# TYPE process_open_handles gauge
+process_open_handles 201
+# HELP process_num_threads Total number of threads
+# TYPE process_num_threads gauge
+process_num_threads 22
+# HELP dotnet_total_memory_bytes Total known allocated memory
+# TYPE dotnet_total_memory_bytes gauge
+dotnet_total_memory_bytes 26146992
+# HELP prometheus_net_metric_families Number of metric families currently registered.
+# TYPE prometheus_net_metric_families gauge
+prometheus_net_metric_families{metric_type="counter"} 22
+prometheus_net_metric_families{metric_type="gauge"} 204
+prometheus_net_metric_families{metric_type="summary"} 0
+prometheus_net_metric_families{metric_type="histogram"} 10
+# HELP prometheus_net_metric_instances Number of metric instances currently registered across all metric families.
+# TYPE prometheus_net_metric_instances gauge
+prometheus_net_metric_instances{metric_type="counter"} 61
+prometheus_net_metric_instances{metric_type="gauge"} 247
+prometheus_net_metric_instances{metric_type="summary"} 0
+prometheus_net_metric_instances{metric_type="histogram"} 29
+# HELP prometheus_net_metric_timeseries Number of metric timeseries currently generated from all metric instances.
+# TYPE prometheus_net_metric_timeseries gauge
+prometheus_net_metric_timeseries{metric_type="counter"} 61
+prometheus_net_metric_timeseries{metric_type="gauge"} 247
+prometheus_net_metric_timeseries{metric_type="summary"} 0
+prometheus_net_metric_timeseries{metric_type="histogram"} 623
+# HELP prometheus_net_exemplars_recorded_total Number of exemplars that were accepted into in-memory storage in the prometheus-net SDK.
+# TYPE prometheus_net_exemplars_recorded_total counter
+prometheus_net_exemplars_recorded_total 4591
+# HELP prometheus_net_eventcounteradapter_sources_connected_total Number of event sources that are currently connected to the adapter.
+# TYPE prometheus_net_eventcounteradapter_sources_connected_total gauge
+prometheus_net_eventcounteradapter_sources_connected_total 7
+# HELP prometheus_net_meteradapter_instruments_connected Number of instruments that are currently connected to the adapter.
+# TYPE prometheus_net_meteradapter_instruments_connected gauge
+prometheus_net_meteradapter_instruments_connected 111
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_created ({connection}) New connections allocated (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_created gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_created 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_handshake_failures ({connection}) Connections that failed during handshake (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_handshake_failures gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_handshake_failures 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_app_rejected ({connection}) Connections rejected by the application (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_app_rejected gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_app_rejected 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_load_rejected ({connection}) Connections rejected due to worker load. (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_load_rejected gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_load_rejected 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_resumed ({connection}) Connections resumed (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_resumed gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_resumed 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_allocated ({connection}) Connections currently allocated (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_allocated gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_allocated 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_connected ({connection}) Connections currently in the connected state (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_connected gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_connected 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_protocol_errors ({connection}) Connections shutdown with a protocol error (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_protocol_errors gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_protocol_errors 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_connection_no_alpn ({connection}) Connection attempts with no matching ALPN (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_connection_no_alpn gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_connection_no_alpn 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_stream_allocated ({stream}) Current streams allocated (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_stream_allocated gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_stream_allocated 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_packet_suspected_lost ({packet}) Packets suspected lost (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_packet_suspected_lost gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_packet_suspected_lost 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_packet_dropped ({packet}) Packets dropped for any reason (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_packet_dropped gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_packet_dropped 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_packet_decryption_failures ({packet}) Packets with decryption failures (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_packet_decryption_failures gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_packet_decryption_failures 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_datagrams ({datagram}) UDP datagrams received (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_datagrams gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_datagrams 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_datagrams ({datagram}) UDP datagrams sent (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_datagrams gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_datagrams 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_bytes (By) UDP payload bytes received (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_bytes gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_bytes 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_bytes (By) UDP payload bytes sent (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_bytes gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_bytes 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_events ({event}) UDP receive events (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_events gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_recv_events 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_calls ({call}) UDP send API calls (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_calls gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_udp_send_calls 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_app_send_bytes (By) Bytes sent by applications (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_app_send_bytes gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_app_send_bytes 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_app_recv_bytes (By) Bytes received by applications (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_app_recv_bytes gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_app_recv_bytes 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_queue_depth ({connection}) Current connections queued for processing (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_queue_depth gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_queue_depth 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queue_depth ({operation}) Current connection operations queued (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queue_depth gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queue_depth 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queued ({operation}) New connection operations queued (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queued gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_queued 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_completed ({operation}) Connection operations processed (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_completed gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_conn_oper_completed 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queue_depth ({operation}) Current worker operations queued (ObservableGauge`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queue_depth gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queue_depth 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queued ({operation}) New worker operations queued (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queued gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_queued 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_completed ({operation}) Worker operations processed (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_completed gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_threadpool_work_oper_completed 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_validated ({challenge}) Successful path challenges (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_validated gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_validated 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_failure ({challenge}) Unsuccessful path challenges (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_failure gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_path_failure 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_reset ({packet}) Stateless reset packets sent ever (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_reset gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_reset 0
+# HELP private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_retry ({packet}) Stateless retry packets sent (ObservableCounter`1)
+# TYPE private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_retry gauge
+private_internaldiagnostics_system_net_quic_msquic_msquic_datapath_send_stateless_retry 0
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_active_dbcontexts ({dbcontext})  (ObservableUpDownCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_active_dbcontexts gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_active_dbcontexts 0
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_queries ({query})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_queries gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_queries 186
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_savechanges ({savechanges})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_savechanges gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_savechanges 4
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_hits ({hits})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_hits gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_hits 153
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_misses ({misses})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_misses gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_compiled_query_cache_misses 33
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_execution_strategy_operation_failures ({failure})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_execution_strategy_operation_failures gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_execution_strategy_operation_failures 0
+# HELP microsoft_entityframeworkcore_microsoft_entityframeworkcore_optimistic_concurrency_failures ({failure})  (ObservableCounter`1)
+# TYPE microsoft_entityframeworkcore_microsoft_entityframeworkcore_optimistic_concurrency_failures gauge
+microsoft_entityframeworkcore_microsoft_entityframeworkcore_optimistic_concurrency_failures 0
+# HELP npgsql_db_client_connection_count ({connection}) The number of connections that are currently in state described by the state attribute. (ObservableUpDownCounter`1)
+# TYPE npgsql_db_client_connection_count gauge
+npgsql_db_client_connection_count{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_client_connection_state="used"} 0
+npgsql_db_client_connection_count{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_client_connection_state="idle"} 0
+# HELP npgsql_db_client_connection_max ({connection}) The maximum number of open connections allowed. (ObservableUpDownCounter`1)
+# TYPE npgsql_db_client_connection_max gauge
+npgsql_db_client_connection_max{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 100
+# HELP system_runtime_dotnet_gc_collections ({collection}) The number of garbage collections that have occurred since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_gc_collections gauge
+system_runtime_dotnet_gc_collections{gc_heap_generation="gen0"} 525
+system_runtime_dotnet_gc_collections{gc_heap_generation="gen1"} 34
+system_runtime_dotnet_gc_collections{gc_heap_generation="gen2"} 16
+# HELP system_runtime_dotnet_process_memory_working_set (By) The number of bytes of physical memory mapped to the process context. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_process_memory_working_set gauge
+system_runtime_dotnet_process_memory_working_set 383606784
+# HELP system_runtime_dotnet_gc_heap_total_allocated (By) The approximate number of bytes allocated on the managed GC heap since the process has started. The returned value does not include any native allocations. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_gc_heap_total_allocated gauge
+system_runtime_dotnet_gc_heap_total_allocated 4129833496
+# HELP system_runtime_dotnet_gc_last_collection_memory_committed_size (By) The amount of committed virtual memory in use by the .NET GC, as observed during the latest garbage collection. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_gc_last_collection_memory_committed_size gauge
+system_runtime_dotnet_gc_last_collection_memory_committed_size 41353216
+# HELP system_runtime_dotnet_gc_last_collection_heap_size (By) The managed GC heap size (including fragmentation), as observed during the latest garbage collection. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_gc_last_collection_heap_size gauge
+system_runtime_dotnet_gc_last_collection_heap_size{gc_heap_generation="poh"} 7286144
+system_runtime_dotnet_gc_last_collection_heap_size{gc_heap_generation="loh"} 196792
+system_runtime_dotnet_gc_last_collection_heap_size{gc_heap_generation="gen2"} 20529680
+system_runtime_dotnet_gc_last_collection_heap_size{gc_heap_generation="gen1"} 592616
+system_runtime_dotnet_gc_last_collection_heap_size{gc_heap_generation="gen0"} 107688
+# HELP system_runtime_dotnet_gc_last_collection_heap_fragmentation_size (By) The heap fragmentation, as observed during the latest garbage collection. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_gc_last_collection_heap_fragmentation_size gauge
+system_runtime_dotnet_gc_last_collection_heap_fragmentation_size{gc_heap_generation="poh"} 942160
+system_runtime_dotnet_gc_last_collection_heap_fragmentation_size{gc_heap_generation="loh"} 64
+system_runtime_dotnet_gc_last_collection_heap_fragmentation_size{gc_heap_generation="gen2"} 3713688
+system_runtime_dotnet_gc_last_collection_heap_fragmentation_size{gc_heap_generation="gen1"} 4296
+system_runtime_dotnet_gc_last_collection_heap_fragmentation_size{gc_heap_generation="gen0"} 744
+# HELP system_runtime_dotnet_gc_pause_time (s) The total amount of time paused in GC since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_gc_pause_time gauge
+system_runtime_dotnet_gc_pause_time 0.727898
+# HELP system_runtime_dotnet_jit_compiled_il_size (By) Count of bytes of intermediate language that have been compiled since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_jit_compiled_il_size gauge
+system_runtime_dotnet_jit_compiled_il_size 3751187
+# HELP system_runtime_dotnet_jit_compiled_methods ({method}) The number of times the JIT compiler (re)compiled methods since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_jit_compiled_methods gauge
+system_runtime_dotnet_jit_compiled_methods 43998
+# HELP system_runtime_dotnet_jit_compilation_time (s) The number of times the JIT compiler (re)compiled methods since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_jit_compilation_time gauge
+system_runtime_dotnet_jit_compilation_time 11.8927687
+# HELP system_runtime_dotnet_monitor_lock_contentions ({contention}) The number of times there was contention when trying to acquire a monitor lock since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_monitor_lock_contentions gauge
+system_runtime_dotnet_monitor_lock_contentions 811
+# HELP system_runtime_dotnet_thread_pool_thread_count ({thread}) The number of thread pool threads that currently exist. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_thread_pool_thread_count gauge
+system_runtime_dotnet_thread_pool_thread_count 4
+# HELP system_runtime_dotnet_thread_pool_work_item_count ({work_item}) The number of work items that the thread pool has completed since the process has started. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_thread_pool_work_item_count gauge
+system_runtime_dotnet_thread_pool_work_item_count 104111
+# HELP system_runtime_dotnet_thread_pool_queue_length ({work_item}) The number of work items that are currently queued to be processed by the thread pool. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_thread_pool_queue_length gauge
+system_runtime_dotnet_thread_pool_queue_length 0
+# HELP system_runtime_dotnet_timer_count ({timer}) The number of timer instances that are currently active. An active timer is registered to tick at some point in the future and has not yet been canceled. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_timer_count gauge
+system_runtime_dotnet_timer_count 79
+# HELP system_runtime_dotnet_assembly_count ({assembly}) The number of .NET assemblies that are currently loaded. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_assembly_count gauge
+system_runtime_dotnet_assembly_count 180
+# HELP system_runtime_dotnet_process_cpu_count ({cpu}) The number of processors available to the process. (ObservableUpDownCounter`1)
+# TYPE system_runtime_dotnet_process_cpu_count gauge
+system_runtime_dotnet_process_cpu_count 2
+# HELP system_runtime_dotnet_process_cpu_time (s) CPU time used by the process. (ObservableCounter`1)
+# TYPE system_runtime_dotnet_process_cpu_time gauge
+system_runtime_dotnet_process_cpu_time{cpu_mode="system"} 21.284982
+system_runtime_dotnet_process_cpu_time{cpu_mode="user"} 43.435826
+# HELP system_runtime_dotnet_exceptions ({exception}) The number of exceptions that have been thrown in managed code. (Counter`1)
+# TYPE system_runtime_dotnet_exceptions gauge
+system_runtime_dotnet_exceptions{error_type="ArgumentOutOfRangeException"} 4419
+# HELP microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_pooled (By) Number of bytes currently pooled and available for reuse. (UpDownCounter`1)
+# TYPE microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_pooled gauge
+microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_pooled{aspnetcore_memory_pool_owner="kestrel"} 98304
+# HELP microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_rented (By) Total number of bytes rented from the memory pool. (Counter`1)
+# TYPE microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_rented gauge
+microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_rented{aspnetcore_memory_pool_owner="kestrel"} 857575424
+# HELP microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_allocated (By) Total number of bytes allocated by the memory pool. Allocation occurs when a memory rental request exceeds the available pooled memory. (Counter`1)
+# TYPE microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_allocated gauge
+microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_allocated{aspnetcore_memory_pool_owner="kestrel"} 101257216
+# HELP microsoft_aspnetcore_hosting_http_server_active_requests ({request}) Number of active HTTP server requests. (UpDownCounter`1)
+# TYPE microsoft_aspnetcore_hosting_http_server_active_requests gauge
+microsoft_aspnetcore_hosting_http_server_active_requests{http_request_method="GET",url_scheme="http"} 1
+# HELP microsoft_aspnetcore_hosting_http_server_request_duration (s) Duration of HTTP server requests. (Histogram`1)
+# TYPE microsoft_aspnetcore_hosting_http_server_request_duration histogram
+microsoft_aspnetcore_hosting_http_server_request_duration_sum{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http"} 0.1286847
+microsoft_aspnetcore_hosting_http_server_request_duration_count{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.01"} 2
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.02"} 4
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.04"} 5
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.08"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.16"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.32"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="0.64"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="1.28"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="2.56"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="5.12"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="10.24"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="20.48"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="40.96"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="81.92"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="163.84"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="327.68"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="655.36"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="1310.72"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="2621.44"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="5242.88"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="10485.76"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="20971.52"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="41943.04"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="83886.08"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="167772.16"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",http_route="{controller=Home}/{action=Index}/{id?}",network_protocol_version="1.1",url_scheme="http",le="+Inf"} 6
+microsoft_aspnetcore_hosting_http_server_request_duration_sum{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http"} 17.890426300000005
+microsoft_aspnetcore_hosting_http_server_request_duration_count{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.01"} 4393
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.02"} 4418
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.04"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.08"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.16"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.32"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="0.64"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="1.28"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="2.56"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="5.12"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="10.24"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="20.48"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="40.96"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="81.92"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="163.84"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="327.68"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="655.36"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="1310.72"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="2621.44"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="5242.88"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="10485.76"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="20971.52"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="41943.04"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="83886.08"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="167772.16"} 4423
+microsoft_aspnetcore_hosting_http_server_request_duration_bucket{http_request_method="GET",http_response_status_code="200",network_protocol_version="1.1",url_scheme="http",le="+Inf"} 4423
+# HELP microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_evicted (By) Total number of bytes evicted from the memory pool. Eviction occurs when idle pooled memory is reclaimed. Evicted memory is available for garbage collection. (Counter`1)
+# TYPE microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_evicted gauge
+microsoft_aspnetcore_memorypool_aspnetcore_memory_pool_evicted{aspnetcore_memory_pool_owner="kestrel"} 101122048
+# HELP system_runtime_cpu_usage (%) CPU Usage
+# TYPE system_runtime_cpu_usage gauge
+system_runtime_cpu_usage 0.05710330614437782
+# HELP system_runtime_working_set (MB) Working Set
+# TYPE system_runtime_working_set gauge
+system_runtime_working_set 383.606784
+# HELP system_runtime_gc_heap_size (MB) GC Heap Size
+# TYPE system_runtime_gc_heap_size gauge
+system_runtime_gc_heap_size 26.028448
+# HELP system_runtime_gen_0_gc_count_total Gen 0 GC Count
+# TYPE system_runtime_gen_0_gc_count_total counter
+system_runtime_gen_0_gc_count_total 567
+# HELP system_runtime_gen_1_gc_count_total Gen 1 GC Count
+# TYPE system_runtime_gen_1_gc_count_total counter
+system_runtime_gen_1_gc_count_total 49
+# HELP system_runtime_gen_2_gc_count_total Gen 2 GC Count
+# TYPE system_runtime_gen_2_gc_count_total counter
+system_runtime_gen_2_gc_count_total 16
+# HELP system_runtime_gen_0_gc_budget (MB) Gen 0 GC Budget
+# TYPE system_runtime_gen_0_gc_budget gauge
+system_runtime_gen_0_gc_budget 4
+# HELP system_runtime_threadpool_thread_count ThreadPool Thread Count
+# TYPE system_runtime_threadpool_thread_count gauge
+system_runtime_threadpool_thread_count 4
+# HELP system_runtime_monitor_lock_contention_count_total Monitor Lock Contention Count
+# TYPE system_runtime_monitor_lock_contention_count_total counter
+system_runtime_monitor_lock_contention_count_total 805
+# HELP system_runtime_threadpool_queue_length ThreadPool Queue Length
+# TYPE system_runtime_threadpool_queue_length gauge
+system_runtime_threadpool_queue_length 0
+# HELP system_runtime_threadpool_completed_items_count_total ThreadPool Completed Work Item Count
+# TYPE system_runtime_threadpool_completed_items_count_total counter
+system_runtime_threadpool_completed_items_count_total 103478
+# HELP system_runtime_alloc_total (B) Allocation Rate
+# TYPE system_runtime_alloc_total counter
+system_runtime_alloc_total 4071636560
+# HELP system_runtime_active_timer_count Number of Active Timers
+# TYPE system_runtime_active_timer_count gauge
+system_runtime_active_timer_count 79
+# HELP system_runtime_gc_fragmentation (%) GC Fragmentation
+# TYPE system_runtime_gc_fragmentation gauge
+system_runtime_gc_fragmentation 16.232943218592883
+# HELP system_runtime_gc_committed (MB) GC Committed Bytes
+# TYPE system_runtime_gc_committed gauge
+system_runtime_gc_committed 41.353216
+# HELP system_runtime_exception_count_total Exception Count
+# TYPE system_runtime_exception_count_total counter
+system_runtime_exception_count_total 4563
+# HELP system_runtime_time_in_gc (%) % Time in GC since last GC
+# TYPE system_runtime_time_in_gc gauge
+system_runtime_time_in_gc 0
+# HELP system_runtime_total_pause_time_by_gc_total (ms) Time paused by GC
+# TYPE system_runtime_total_pause_time_by_gc_total counter
+system_runtime_total_pause_time_by_gc_total 675.2330000000001
+# HELP system_runtime_gen_0_size (B) Gen 0 Size
+# TYPE system_runtime_gen_0_size gauge
+system_runtime_gen_0_size 107688
+# HELP system_runtime_gen_1_size (B) Gen 1 Size
+# TYPE system_runtime_gen_1_size gauge
+system_runtime_gen_1_size 592616
+# HELP system_runtime_gen_2_size (B) Gen 2 Size
+# TYPE system_runtime_gen_2_size gauge
+system_runtime_gen_2_size 20529680
+# HELP system_runtime_loh_size (B) LOH Size
+# TYPE system_runtime_loh_size gauge
+system_runtime_loh_size 196792
+# HELP system_runtime_poh_size (B) POH (Pinned Object Heap) Size
+# TYPE system_runtime_poh_size gauge
+system_runtime_poh_size 7286144
+# HELP system_runtime_assembly_count Number of Assemblies Loaded
+# TYPE system_runtime_assembly_count gauge
+system_runtime_assembly_count 180
+# HELP system_runtime_il_bytes_jitted (B) IL Bytes Jitted
+# TYPE system_runtime_il_bytes_jitted gauge
+system_runtime_il_bytes_jitted 3751187
+# HELP system_runtime_methods_jitted_count Number of Methods Jitted
+# TYPE system_runtime_methods_jitted_count gauge
+system_runtime_methods_jitted_count 43998
+# HELP system_runtime_time_in_jit_total (ms) Time spent in JIT
+# TYPE system_runtime_time_in_jit_total counter
+system_runtime_time_in_jit_total 7470.7826000000005
+# HELP system_net_nameresolution_dns_lookups_requested DNS Lookups Requested
+# TYPE system_net_nameresolution_dns_lookups_requested gauge
+system_net_nameresolution_dns_lookups_requested 411
+# HELP system_net_nameresolution_current_dns_lookups Current DNS Lookups
+# TYPE system_net_nameresolution_current_dns_lookups gauge
+system_net_nameresolution_current_dns_lookups 0
+# HELP system_net_nameresolution_dns_lookups_duration (ms) Average DNS Lookup Duration
+# TYPE system_net_nameresolution_dns_lookups_duration gauge
+system_net_nameresolution_dns_lookups_duration 0
+# HELP system_net_sockets_current_outgoing_connect_attempts Current Outgoing Connect Attempts
+# TYPE system_net_sockets_current_outgoing_connect_attempts gauge
+system_net_sockets_current_outgoing_connect_attempts 0
+# HELP system_net_sockets_outgoing_connections_established Outgoing Connections Established
+# TYPE system_net_sockets_outgoing_connections_established gauge
+system_net_sockets_outgoing_connections_established 416
+# HELP system_net_sockets_incoming_connections_established Incoming Connections Established
+# TYPE system_net_sockets_incoming_connections_established gauge
+system_net_sockets_incoming_connections_established 805
+# HELP system_net_sockets_bytes_received Bytes Received
+# TYPE system_net_sockets_bytes_received gauge
+system_net_sockets_bytes_received 5099459
+# HELP system_net_sockets_bytes_sent Bytes Sent
+# TYPE system_net_sockets_bytes_sent gauge
+system_net_sockets_bytes_sent 760034234
+# HELP system_net_sockets_datagrams_received Datagrams Received
+# TYPE system_net_sockets_datagrams_received gauge
+system_net_sockets_datagrams_received 0
+# HELP system_net_sockets_datagrams_sent Datagrams Sent
+# TYPE system_net_sockets_datagrams_sent gauge
+system_net_sockets_datagrams_sent 0
+# HELP system_net_security_tls_handshake_total TLS handshakes completed
+# TYPE system_net_security_tls_handshake_total counter
+system_net_security_tls_handshake_total 411
+# HELP system_net_security_total_tls_handshakes Total TLS handshakes completed
+# TYPE system_net_security_total_tls_handshakes gauge
+system_net_security_total_tls_handshakes 411
+# HELP system_net_security_current_tls_handshakes Current TLS handshakes
+# TYPE system_net_security_current_tls_handshakes gauge
+system_net_security_current_tls_handshakes 0
+# HELP system_net_security_failed_tls_handshakes Total TLS handshakes failed
+# TYPE system_net_security_failed_tls_handshakes gauge
+system_net_security_failed_tls_handshakes 0
+# HELP system_net_security_all_tls_sessions_open All TLS Sessions Active
+# TYPE system_net_security_all_tls_sessions_open gauge
+system_net_security_all_tls_sessions_open 0
+# HELP system_net_security_tls10_sessions_open TLS 1.0 Sessions Active
+# TYPE system_net_security_tls10_sessions_open gauge
+system_net_security_tls10_sessions_open 0
+# HELP system_net_security_tls11_sessions_open TLS 1.1 Sessions Active
+# TYPE system_net_security_tls11_sessions_open gauge
+system_net_security_tls11_sessions_open 0
+# HELP system_net_security_tls12_sessions_open TLS 1.2 Sessions Active
+# TYPE system_net_security_tls12_sessions_open gauge
+system_net_security_tls12_sessions_open 0
+# HELP system_net_security_tls13_sessions_open TLS 1.3 Sessions Active
+# TYPE system_net_security_tls13_sessions_open gauge
+system_net_security_tls13_sessions_open 0
+# HELP system_net_security_all_tls_handshake_duration (ms) TLS Handshake Duration
+# TYPE system_net_security_all_tls_handshake_duration gauge
+system_net_security_all_tls_handshake_duration 0
+# HELP system_net_security_tls10_handshake_duration (ms) TLS 1.0 Handshake Duration
+# TYPE system_net_security_tls10_handshake_duration gauge
+system_net_security_tls10_handshake_duration 0
+# HELP system_net_security_tls11_handshake_duration (ms) TLS 1.1 Handshake Duration
+# TYPE system_net_security_tls11_handshake_duration gauge
+system_net_security_tls11_handshake_duration 0
+# HELP system_net_security_tls12_handshake_duration (ms) TLS 1.2 Handshake Duration
+# TYPE system_net_security_tls12_handshake_duration gauge
+system_net_security_tls12_handshake_duration 0
+# HELP system_net_security_tls13_handshake_duration (ms) TLS 1.3 Handshake Duration
+# TYPE system_net_security_tls13_handshake_duration gauge
+system_net_security_tls13_handshake_duration 0
+# HELP microsoft_aspnetcore_hosting_requests_per_second_total Request Rate
+# TYPE microsoft_aspnetcore_hosting_requests_per_second_total counter
+microsoft_aspnetcore_hosting_requests_per_second_total 5170
+# HELP microsoft_aspnetcore_hosting_total_requests Total Requests
+# TYPE microsoft_aspnetcore_hosting_total_requests gauge
+microsoft_aspnetcore_hosting_total_requests 5170
+# HELP microsoft_aspnetcore_hosting_current_requests Current Requests
+# TYPE microsoft_aspnetcore_hosting_current_requests gauge
+microsoft_aspnetcore_hosting_current_requests 0
+# HELP microsoft_aspnetcore_hosting_failed_requests Failed Requests
+# TYPE microsoft_aspnetcore_hosting_failed_requests gauge
+microsoft_aspnetcore_hosting_failed_requests 0
+# HELP microsoft_aspnetcore_server_kestrel_connections_per_second_total Connection Rate
+# TYPE microsoft_aspnetcore_server_kestrel_connections_per_second_total counter
+microsoft_aspnetcore_server_kestrel_connections_per_second_total 756
+# HELP microsoft_aspnetcore_server_kestrel_total_connections Total Connections
+# TYPE microsoft_aspnetcore_server_kestrel_total_connections gauge
+microsoft_aspnetcore_server_kestrel_total_connections 805
+# HELP microsoft_aspnetcore_server_kestrel_tls_handshakes_per_second_total TLS Handshake Rate
+# TYPE microsoft_aspnetcore_server_kestrel_tls_handshakes_per_second_total counter
+microsoft_aspnetcore_server_kestrel_tls_handshakes_per_second_total 0
+# HELP microsoft_aspnetcore_server_kestrel_total_tls_handshakes Total TLS Handshakes
+# TYPE microsoft_aspnetcore_server_kestrel_total_tls_handshakes gauge
+microsoft_aspnetcore_server_kestrel_total_tls_handshakes 0
+# HELP microsoft_aspnetcore_server_kestrel_current_tls_handshakes Current TLS Handshakes
+# TYPE microsoft_aspnetcore_server_kestrel_current_tls_handshakes gauge
+microsoft_aspnetcore_server_kestrel_current_tls_handshakes 0
+# HELP microsoft_aspnetcore_server_kestrel_failed_tls_handshakes Failed TLS Handshakes
+# TYPE microsoft_aspnetcore_server_kestrel_failed_tls_handshakes gauge
+microsoft_aspnetcore_server_kestrel_failed_tls_handshakes 0
+# HELP microsoft_aspnetcore_server_kestrel_current_connections Current Connections
+# TYPE microsoft_aspnetcore_server_kestrel_current_connections gauge
+microsoft_aspnetcore_server_kestrel_current_connections 1
+# HELP microsoft_aspnetcore_server_kestrel_connection_queue_length Connection Queue Length
+# TYPE microsoft_aspnetcore_server_kestrel_connection_queue_length gauge
+microsoft_aspnetcore_server_kestrel_connection_queue_length 0
+# HELP microsoft_aspnetcore_server_kestrel_request_queue_length Request Queue Length
+# TYPE microsoft_aspnetcore_server_kestrel_request_queue_length gauge
+microsoft_aspnetcore_server_kestrel_request_queue_length 0
+# HELP microsoft_aspnetcore_server_kestrel_current_upgraded_requests Current Upgraded Requests (WebSockets)
+# TYPE microsoft_aspnetcore_server_kestrel_current_upgraded_requests gauge
+microsoft_aspnetcore_server_kestrel_current_upgraded_requests 0
+# HELP microsoft_aspnetcore_server_kestrel_kestrel_queued_connections ({connection}) Number of connections that are currently queued and are waiting to start. (UpDownCounter`1)
+# TYPE microsoft_aspnetcore_server_kestrel_kestrel_queued_connections gauge
+microsoft_aspnetcore_server_kestrel_kestrel_queued_connections{network_transport="tcp",network_type="ipv4",server_address="192.168.192.147",server_port="9102"} 0
+microsoft_aspnetcore_server_kestrel_kestrel_queued_connections{network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002"} 0
+microsoft_aspnetcore_server_kestrel_kestrel_queued_connections{network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002"} 0
+# HELP microsoft_aspnetcore_server_kestrel_kestrel_active_connections ({connection}) Number of connections that are currently active on the server. (UpDownCounter`1)
+# TYPE microsoft_aspnetcore_server_kestrel_kestrel_active_connections gauge
+microsoft_aspnetcore_server_kestrel_kestrel_active_connections{network_transport="tcp",network_type="ipv4",server_address="192.168.192.147",server_port="9102"} 2
+microsoft_aspnetcore_server_kestrel_kestrel_active_connections{network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002"} 0
+microsoft_aspnetcore_server_kestrel_kestrel_active_connections{network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002"} 0
+# HELP microsoft_aspnetcore_routing_aspnetcore_routing_match_attempts ({match_attempt}) Number of requests that were attempted to be matched to an endpoint. (Counter`1)
+# TYPE microsoft_aspnetcore_routing_aspnetcore_routing_match_attempts gauge
+microsoft_aspnetcore_routing_aspnetcore_routing_match_attempts{aspnetcore_routing_is_fallback="False",aspnetcore_routing_match_status="success",http_route="{controller=Home}/{action=Index}/{id?}"} 6
+# HELP microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration (s) The authentication duration for a request. (Histogram`1)
+# TYPE microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration histogram
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_sum{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer"} 0.0003874
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_count{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.01"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.02"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.04"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.08"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.16"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.32"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="0.64"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="1.28"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="2.56"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="5.12"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="10.24"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="20.48"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="40.96"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="81.92"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="163.84"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="327.68"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="655.36"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="1310.72"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="2621.44"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="5242.88"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="10485.76"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="20971.52"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="41943.04"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="83886.08"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="167772.16"} 6
+microsoft_aspnetcore_authentication_aspnetcore_authentication_authenticate_duration_bucket{aspnetcore_authentication_result="success",aspnetcore_authentication_scheme="Bearer",le="+Inf"} 6
+# HELP npgsql_db_client_operation_npgsql_executing ({command}) The number of currently executing database commands. (UpDownCounter`1)
+# TYPE npgsql_db_client_operation_npgsql_executing gauge
+npgsql_db_client_operation_npgsql_executing{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 0
+# HELP npgsql_db_client_operation_npgsql_bytes_written (By) The number of bytes written. (Counter`1)
+# TYPE npgsql_db_client_operation_npgsql_bytes_written gauge
+npgsql_db_client_operation_npgsql_bytes_written{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 323187
+# HELP npgsql_db_client_operation_npgsql_bytes_read (By) The number of bytes read. (Counter`1)
+# TYPE npgsql_db_client_operation_npgsql_bytes_read gauge
+npgsql_db_client_operation_npgsql_bytes_read{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 13199
+# HELP npgsql_db_client_operation_duration (s) Duration of database client operations. (Histogram`1)
+# TYPE npgsql_db_client_operation_duration histogram
+npgsql_db_client_operation_duration_sum{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432"} 0.0254266
+npgsql_db_client_operation_duration_count{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.01"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.02"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.04"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.08"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.16"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.32"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="0.64"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="1.28"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="2.56"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="5.12"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="10.24"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="20.48"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="40.96"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="81.92"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="163.84"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="327.68"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="655.36"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="1310.72"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="2621.44"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="5242.88"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="10485.76"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="20971.52"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="41943.04"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="83886.08"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="167772.16"} 6
+npgsql_db_client_operation_duration_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",db_system_name="postgresql",server_address="localhost",server_port="5432",le="+Inf"} 6
+# HELP microsoft_aspnetcore_server_kestrel_kestrel_connection_duration (s) The duration of connections on the server. (Histogram`1)
+# TYPE microsoft_aspnetcore_server_kestrel_kestrel_connection_duration histogram
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_sum{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002"} 0.0280881
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_count{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.01"} 2
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.02"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.04"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.08"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.16"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.32"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="0.64"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="1.28"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="2.56"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="5.12"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="10.24"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="20.48"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="40.96"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="81.92"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="163.84"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="327.68"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="655.36"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="1310.72"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="2621.44"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="5242.88"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="10485.76"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="20971.52"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="41943.04"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="83886.08"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="167772.16"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::1",server_port="5002",le="+Inf"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_sum{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002"} 0.1023038
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_count{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.01"} 0
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.02"} 1
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.04"} 2
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.08"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.16"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.32"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="0.64"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="1.28"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="2.56"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="5.12"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="10.24"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="20.48"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="40.96"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="81.92"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="163.84"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="327.68"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="655.36"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="1310.72"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="2621.44"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="5242.88"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="10485.76"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="20971.52"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="41943.04"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="83886.08"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="167772.16"} 3
+microsoft_aspnetcore_server_kestrel_kestrel_connection_duration_bucket{network_protocol_name="http",network_protocol_version="1.1",network_transport="tcp",network_type="ipv6",server_address="::ffff:127.0.0.1",server_port="5002",le="+Inf"} 3
+# HELP system_net_nameresolution_dns_lookup_duration (s) Measures the time taken to perform a DNS lookup. (Histogram`1)
+# TYPE system_net_nameresolution_dns_lookup_duration histogram
+system_net_nameresolution_dns_lookup_duration_sum{dns_question_name="localhost"} 0.0005928
+system_net_nameresolution_dns_lookup_duration_count{dns_question_name="localhost"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.01"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.02"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.04"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.08"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.16"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.32"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="0.64"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="1.28"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="2.56"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="5.12"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="10.24"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="20.48"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="40.96"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="81.92"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="163.84"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="327.68"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="655.36"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="1310.72"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="2621.44"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="5242.88"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="10485.76"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="20971.52"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="41943.04"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="83886.08"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="167772.16"} 4
+system_net_nameresolution_dns_lookup_duration_bucket{dns_question_name="localhost",le="+Inf"} 4
+# HELP npgsql_db_client_connection_npgsql_create_time (s) The time it took to create a new connection. (Histogram`1)
+# TYPE npgsql_db_client_connection_npgsql_create_time histogram
+npgsql_db_client_connection_npgsql_create_time_sum{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 0.09506019999999998
+npgsql_db_client_connection_npgsql_create_time_count{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.01"} 0
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.02"} 3
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.04"} 3
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.08"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.16"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.32"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="0.64"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="1.28"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="2.56"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="5.12"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="10.24"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="20.48"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="40.96"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="81.92"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="163.84"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="327.68"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="655.36"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="1310.72"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="2621.44"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="5242.88"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="10485.76"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="20971.52"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="41943.04"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="83886.08"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="167772.16"} 4
+npgsql_db_client_connection_npgsql_create_time_bucket{db_client_connection_pool_name="Host=localhost;Database=sensordb;Username=postgres;Command Timeout=220",le="+Inf"} 4
+# HELP npgsql_db_client_operation_npgsql_prepared_ratio The ratio of prepared command executions. (ObservableGauge`1)
+# TYPE npgsql_db_client_operation_npgsql_prepared_ratio gauge
+# HELP system_net_http_http_client_active_requests ({request}) Number of outbound HTTP requests that are currently active on the client. (UpDownCounter`1)
+# TYPE system_net_http_http_client_active_requests gauge
+# HELP system_net_http_http_client_open_connections ({connection}) Number of outbound HTTP connections that are currently active or idle on the client. (UpDownCounter`1)
+# TYPE system_net_http_http_client_open_connections gauge
+# HELP system_net_http_http_client_request_time_in_queue (s) The amount of time requests spent on a queue waiting for an available connection. (Histogram`1)
+# TYPE system_net_http_http_client_request_time_in_queue histogram
+# HELP system_net_http_http_client_request_duration (s) Duration of HTTP client requests. (Histogram`1)
+# TYPE system_net_http_http_client_request_duration histogram
+# HELP system_net_http_requests_started Requests Started
+# TYPE system_net_http_requests_started gauge
+system_net_http_requests_started 1
+# HELP system_net_http_requests_started_total Requests Started Rate
+# TYPE system_net_http_requests_started_total counter
+system_net_http_requests_started_total 1
+# HELP system_net_http_requests_failed Requests Failed
+# TYPE system_net_http_requests_failed gauge
+system_net_http_requests_failed 0
+# HELP system_net_http_requests_failed_total Requests Failed Rate
+# TYPE system_net_http_requests_failed_total counter
+system_net_http_requests_failed_total 0
+# HELP system_net_http_current_requests Current Requests
+# TYPE system_net_http_current_requests gauge
+system_net_http_current_requests 0
+# HELP system_net_http_http11_connections_current_total Current Http 1.1 Connections
+# TYPE system_net_http_http11_connections_current_total gauge
+system_net_http_http11_connections_current_total 0
+# HELP system_net_http_http20_connections_current_total Current Http 2.0 Connections
+# TYPE system_net_http_http20_connections_current_total gauge
+system_net_http_http20_connections_current_total 0
+# HELP system_net_http_http30_connections_current_total Current Http 3.0 Connections
+# TYPE system_net_http_http30_connections_current_total gauge
+system_net_http_http30_connections_current_total 0
+# HELP system_net_http_http11_requests_queue_duration (ms) HTTP 1.1 Requests Queue Duration
+# TYPE system_net_http_http11_requests_queue_duration gauge
+system_net_http_http11_requests_queue_duration 0
+# HELP system_net_http_http20_requests_queue_duration (ms) HTTP 2.0 Requests Queue Duration
+# TYPE system_net_http_http20_requests_queue_duration gauge
+system_net_http_http20_requests_queue_duration 0
+# HELP system_net_http_http30_requests_queue_duration (ms) HTTP 3.0 Requests Queue Duration
+# TYPE system_net_http_http30_requests_queue_duration gauge
+system_net_http_http30_requests_queue_duration 0
+# HELP system_net_http_http_client_connection_duration (s) The duration of successfully established outbound HTTP connections. (Histogram`1)
+# TYPE system_net_http_http_client_connection_duration histogram
+# HELP microsoft_aspnetcore_authorization_aspnetcore_authorization_attempts ({attempt}) The total number of authorization attempts. (Counter`1)
+# TYPE microsoft_aspnetcore_authorization_aspnetcore_authorization_attempts gauge

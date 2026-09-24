@@ -2,6 +2,7 @@
 set -euo pipefail
 
 # postgres_exporter installation (x86_64 and ARM — single script, architecture is detected automatically)
+# Extended variant: enables pg_stat_statements collectors
 # The password is embedded directly in the service file
 
 echo "========================================="
@@ -37,8 +38,8 @@ esac
 POSTGRES_EXPORTER_VERSION="0.18.1"
 POSTGRES_HOST="localhost"
 POSTGRES_PORT="5432"
-POSTGRES_DB="postgres"
-POSTGRES_USER="postgres_exporter"
+POSTGRES_DB="burstroydb"
+POSTGRES_USER="user_postgres_exporter"
 POSTGRES_PASSWORD="12345678"
 
 echo "Password in use: ${POSTGRES_PASSWORD}"
@@ -69,7 +70,7 @@ User=postgres_exporter
 Group=postgres_exporter
 Type=simple
 Environment="DATA_SOURCE_NAME=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}?sslmode=disable"
-ExecStart=/usr/local/bin/postgres_exporter --web.listen-address=:9187
+ExecStart=/usr/local/bin/postgres_exporter --web.listen-address=:9187 --collector.stat_statements --collector.stat_statements.include_query --collector.stat_statements.query_length=120
 Restart=always
 
 [Install]

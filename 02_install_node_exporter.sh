@@ -1,18 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
-# Установка Node Exporter (x86_64 и ARM — единый скрипт, архитектура определяется автоматически)
+# Node Exporter installation (x86_64 and ARM — single script, architecture is detected automatically)
 
 source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 
 SERVER_IP=$(detect_server_ip)
 
 echo "========================================="
-echo "Установка Node Exporter"
-echo "IP адрес сервера: ${SERVER_IP}"
+echo "Installing Node Exporter"
+echo "Server IP address: ${SERVER_IP}"
 echo "========================================="
 
-# Определение архитектуры
+# Detect architecture
 ARCH=$(uname -m)
 case ${ARCH} in
     x86_64|amd64)
@@ -28,31 +28,31 @@ case ${ARCH} in
         EXPORTER_ARCH="linux-armv6"
         ;;
     *)
-        echo "Неподдерживаемая архитектура: ${ARCH}" >&2
+        echo "Unsupported architecture: ${ARCH}" >&2
         exit 1
         ;;
 esac
 
-# Версия: последняя с GitHub API, при недоступности — фиксированный fallback
+# Version: latest from the GitHub API, fixed fallback if the API is unreachable
 NODE_EXPORTER_VERSION="$(get_latest_release "prometheus/node_exporter" "1.10.2")"
 
-echo "Обнаружена архитектура: ${ARCH} -> ${EXPORTER_ARCH}"
-echo "Версия Node Exporter: ${NODE_EXPORTER_VERSION}"
+echo "Detected architecture: ${ARCH} -> ${EXPORTER_ARCH}"
+echo "Node Exporter version: ${NODE_EXPORTER_VERSION}"
 
-# Скачивание и распаковка
+# Download and unpack
 cd /tmp
 wget --timeout=30 --tries=3 \
     "https://github.com/prometheus/node_exporter/releases/download/v${NODE_EXPORTER_VERSION}/node_exporter-${NODE_EXPORTER_VERSION}.${EXPORTER_ARCH}.tar.gz"
 
 tar xf "node_exporter-${NODE_EXPORTER_VERSION}.${EXPORTER_ARCH}.tar.gz"
 
-# Копирование бинарного файла в /usr/local/bin
+# Copy the binary to /usr/local/bin
 install -m 755 "node_exporter-${NODE_EXPORTER_VERSION}.${EXPORTER_ARCH}/node_exporter" /usr/local/bin/node_exporter
 
-# Создание пользователя для node_exporter (если не существует)
+# Create the node_exporter user (if it does not exist)
 useradd --no-create-home --shell /bin/false node_exporter 2>/dev/null || true
 
-# Создание systemd сервиса
+# Create the systemd service
 cat > /etc/systemd/system/node_exporter.service << EOF
 [Unit]
 Description=Node Exporter
@@ -70,23 +70,23 @@ ExecStart=/usr/local/bin/node_exporter \
 WantedBy=multi-user.target
 EOF
 
-# Создание директории для текстовых метрик
+# Create the textfile metrics directory
 mkdir -p /var/lib/node_exporter/textfile_collector
 chown -R node_exporter:node_exporter /var/lib/node_exporter
 
-# Запуск сервиса
+# Start the service
 systemctl daemon-reload
 systemctl enable node_exporter
 systemctl start node_exporter
 
-# Очистка временных файлов
+# Clean up temporary files
 rm -rf /tmp/node_exporter-*
 
 echo "========================================="
-echo "Установка Node Exporter завершена"
+echo "Node Exporter installation completed"
 echo "========================================="
 
-# Проверка статуса
+# Check status
 systemctl status node_exporter --no-pager
 
-echo "Node Exporter доступен по адресу: http://${SERVER_IP}:9100/metrics"
+echo "Node Exporter is available at: http://${SERVER_IP}:9100/metrics"

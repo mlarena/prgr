@@ -7,21 +7,21 @@ SERVER_IP=$(detect_server_ip)
 GRAFANA_URL="http://localhost:3000"
 
 echo "========================================="
-echo "Настройка источника данных в Grafana"
-echo "IP адрес сервера: ${SERVER_IP}"
+echo "Configuring Grafana datasource"
+echo "Server IP address: ${SERVER_IP}"
 echo "========================================="
 
-# Ждем полного запуска Grafana (выходим с ошибкой, если не поднялась)
-echo "Ожидание запуска Grafana..."
+# Wait for Grafana to fully start (exit with error if it never comes up)
+echo "Waiting for Grafana to start..."
 wait_for_url "${GRAFANA_URL}/api/health" "Grafana" 30
 
-# Пароль admin задан при запуске контейнера через GF_SECURITY_ADMIN_PASSWORD (см. 04)
+# The admin password is set at container startup via GF_SECURITY_ADMIN_PASSWORD (see 04)
 
-# Проверяем, что datasource еще не добавлен (идемпотентность)
+# Check that the datasource does not exist yet (idempotency)
 if curl -fsS -u admin:admin "${GRAFANA_URL}/api/datasources/name/Prometheus" > /dev/null 2>&1; then
-    echo "Источник данных Prometheus уже существует — пропускаем"
+    echo "Prometheus datasource already exists — skipping"
 else
-    # Добавляем источник данных Prometheus
+    # Add the Prometheus datasource
     curl -fsS -X POST -H "Content-Type: application/json" \
       -H "Accept: application/json" \
       -u admin:admin \
@@ -37,5 +37,5 @@ else
 fi
 
 echo "========================================="
-echo "Источник данных Prometheus добавлен"
+echo "Prometheus datasource added"
 echo "========================================="

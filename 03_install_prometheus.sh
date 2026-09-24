@@ -5,21 +5,21 @@ source "$(dirname "${BASH_SOURCE[0]}")/common.sh"
 
 SERVER_IP=$(detect_server_ip)
 
-# === Архитектура ===
-# Этот скрипт запускается на СЕРВЕРЕ МОНИТОРИНГА (Grafana/Prometheus)
-# MONITORED_IP — сервер, который будем мониторить (там установлен node_exporter)
+# === Architecture ===
+# This script runs on the MONITORING SERVER (Grafana/Prometheus)
+# MONITORED_IP — the server to be monitored (node_exporter is installed there)
 MONITORED_IP="192.168.192.147"
 # ===================
 
 echo "========================================="
-echo "Установка Prometheus"
-echo "IP адрес сервера: ${SERVER_IP}"
+echo "Installing Prometheus"
+echo "Server IP address: ${SERVER_IP}"
 echo "========================================="
 
-# Создаем рабочую директорию
+# Create the working directory
 mkdir -p /monitoring/prometheus
 
-# Создаем конфигурационный файл Prometheus с автоматической подстановкой IP
+# Create the Prometheus configuration file with automatic IP substitution
 cat > /monitoring/prometheus/prometheus.yml << EOF
 global:
   scrape_interval: 15s
@@ -33,26 +33,26 @@ alerting:
 rule_files: []
 
 scrape_configs:
-  # Мониторинг самого Prometheus
+  # Prometheus self-monitoring
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
 
-  # Мониторинг хоста через node_exporter (сервер, который мониторим)
+  # Host monitoring via node_exporter (the monitored server)
   - job_name: 'node_exporter'
     static_configs:
       - targets: ['${MONITORED_IP}:9100']
 EOF
 
-# Останавливаем и удаляем старый контейнер если существует
+# Stop and remove the old container if it exists
 docker stop prometheus 2>/dev/null || true
 docker rm prometheus 2>/dev/null || true
 
-# Загружаем образ Prometheus (docker pull идемпотентен — докачает только недостающее)
-echo "Загрузка образа Prometheus..."
+# Pull the Prometheus image (docker pull is idempotent — only missing layers are fetched)
+echo "Pulling Prometheus image..."
 docker pull prom/prometheus
 
-# Запускаем Prometheus в Docker
+# Run Prometheus in Docker
 docker run -d \
   --name=prometheus \
   --restart unless-stopped \
@@ -64,12 +64,12 @@ docker run -d \
   --storage.tsdb.path=/prometheus
 
 echo "========================================="
-echo "Установка Prometheus завершена"
+echo "Prometheus installation completed"
 echo "========================================="
 
-# Проверяем запуск
+# Verify startup
 sleep 3
 docker ps | grep prometheus
 
-echo "Prometheus доступен по адресу: http://${SERVER_IP}:9090"
+echo "Prometheus is available at: http://${SERVER_IP}:9090"
 echo "Prometheus Targets: http://${SERVER_IP}:9090/targets"
